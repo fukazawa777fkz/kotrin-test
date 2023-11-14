@@ -7,6 +7,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate
 import org.springframework.boot.test.web.client.getForEntity
 import org.springframework.http.HttpStatus
 
+// classes = [BlogApplication::class]が無いと失敗する！！！
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = [BlogApplication::class])
 class IntegrationTests(@Autowired val restTemplate: TestRestTemplate) {
 
